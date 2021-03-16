@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: goweb
+  name: vegetaas
   namespace: default
 spec:
   interval: 120m
@@ -22,13 +22,9 @@ spec:
   rollback:
     cleanupOnFail: true
   values:
-    nameOverride: goweb
+    nameOverride: vegetaas
     image:
-      name: vibioh/goweb
-      tag: "202103161413" # {"$imagepolicy": "default:flux-goweb-api:tag"}
+      name: vibioh/vegetaas
+      tag: "latest" # {"$imagepolicy": "default:flux-vegetaas-api:tag"}
     config:
-      API_LOGGER_JSON: "true"
-    ingress:
-      enabled: true
-      hosts:
-      - api.vibioh.fr
+      VEGETAAS_LOGGER_JSON: "true"
