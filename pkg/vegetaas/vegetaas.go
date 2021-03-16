@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/ViBiOh/httputils/v4/pkg/httperror"
+	"github.com/ViBiOh/httputils/v4/pkg/logger"
 	vegeta "github.com/tsenart/vegeta/v12/lib"
 )
 
@@ -26,6 +27,9 @@ func Handler() http.Handler {
 }
 
 func attack(url string, rps int, duration time.Duration) {
+	logger.Info("Attacking `%s` at %d requets per second during %s", url, rps, duration)
+	defer logger.Info("Attack of `%s` is done!", url)
+
 	vegeta.NewAttacker().Attack(
 		vegeta.NewStaticTargeter(vegeta.Target{
 			Method: "GET",
