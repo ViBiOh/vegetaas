@@ -1,6 +1,5 @@
 FROM vibioh/scratch
 
-ENV API_PORT 1080
 EXPOSE 1080
 
 ENV ZONEINFO /zoneinfo.zip
