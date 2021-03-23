@@ -25,6 +25,19 @@ jobs:
           make
           git --no-pager diff -- ':(exclude)go.sum' && git diff --quiet -- ':(exclude)go.sum'
       - uses: codecov/codecov-action@v1
+  sonarcloud:
+    name: SonarCloud
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: SonarCloud
+        uses: SonarSource/sonarcloud-github-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   package:
     name: Docker
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
