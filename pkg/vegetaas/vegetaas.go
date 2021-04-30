@@ -30,14 +30,15 @@ func attack(url string, rps int, duration time.Duration) {
 	logger.Info("Attacking `%s` at %d requets per second during %s", url, rps, duration)
 	defer logger.Info("Attack of `%s` is done!", url)
 
-	vegeta.NewAttacker().Attack(
+	for range vegeta.NewAttacker().Attack(
 		vegeta.NewStaticTargeter(vegeta.Target{
 			Method: "GET",
 			URL:    url,
 		}), vegeta.Rate{
 			Freq: rps,
 			Per:  time.Second,
-		}, duration, "Boom!")
+		}, duration, "Boom!") {
+	}
 }
 
 func parseQuery(r *http.Request) (url string, rps int, duration time.Duration, err error) {
