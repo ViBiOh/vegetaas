@@ -2,7 +2,6 @@
 
 [![Build](https://github.com/ViBiOh/vegetaas/workflows/Build/badge.svg)](https://github.com/ViBiOh/vegetaas/actions)
 [![codecov](https://codecov.io/gh/ViBiOh/vegetaas/branch/main/graph/badge.svg)](https://codecov.io/gh/ViBiOh/vegetaas)
-[![Go Report Card](https://goreportcard.com/badge/github.com/ViBiOh/vegetaas)](https://goreportcard.com/report/github.com/ViBiOh/vegetaas)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ViBiOh_vegetaas&metric=alert_status)](https://sonarcloud.io/dashboard?id=ViBiOh_vegetaas)
 
 ## Getting started
