@@ -28,3 +28,5 @@ spec:
       tag: "202105161823" # {"$imagepolicy": "default:flux-vegetaas-api:tag"}
     config:
       VEGETAAS_LOGGER_JSON: "true"
+    podDisruption:
+      enabled: false
