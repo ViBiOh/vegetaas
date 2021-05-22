@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: app
-      version: "0.0.69"
+      version: "0.0.70"
       sourceRef:
         kind: HelmRepository
         name: vibioh
@@ -28,5 +28,3 @@ spec:
       tag: "202105220939" # {"$imagepolicy": "default:flux-vegetaas-api:tag"}
     config:
       VEGETAAS_LOGGER_JSON: "true"
-    podDisruption:
-      enabled: false
