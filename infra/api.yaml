@@ -25,6 +25,6 @@ spec:
     nameOverride: vegetaas
     image:
       name: vibioh/vegetaas
-      tag: "202105282157" # {"$imagepolicy": "default:flux-vegetaas-api:tag"}
+      tag: "202105282221" # {"$imagepolicy": "default:flux-vegetaas-api:tag"}
     config:
       VEGETAAS_LOGGER_JSON: "true"
