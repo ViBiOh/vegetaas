@@ -23,6 +23,7 @@ func Handler() http.Handler {
 		}
 
 		go attack(url, rps, duration)
+		w.WriteHeader(http.StatusOK)
 	})
 }
 
@@ -30,7 +31,10 @@ func attack(url string, rps int, duration time.Duration) {
 	logger.Info("Attacking `%s` at %d requets per second during %s", url, rps, duration)
 	defer logger.Info("Attack of `%s` is done!", url)
 
-	for range vegeta.NewAttacker().Attack(
+	attacker := vegeta.NewAttacker()
+	defer attacker.Stop()
+
+	for range attacker.Attack(
 		vegeta.NewStaticTargeter(vegeta.Target{
 			Method: "GET",
 			URL:    url,
