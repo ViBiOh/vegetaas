@@ -4,6 +4,10 @@
 [![codecov](https://codecov.io/gh/ViBiOh/vegetaas/branch/main/graph/badge.svg)](https://codecov.io/gh/ViBiOh/vegetaas)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ViBiOh_vegetaas&metric=alert_status)](https://sonarcloud.io/dashboard?id=ViBiOh_vegetaas)
 
+An HTTP wrapper around [vegeta](https://github.com/tsenart/vegeta).
+
+Thanks to [tsenart](https://github.com/tsenart) for the awesome `vegeta`.
+
 ## Getting started
 
 Golang binary is built with static link. You can download it directly from the [Github Release page](https://github.com/ViBiOh/vegetaas/releases) or build it by yourself by cloning this repo and running `make`.
