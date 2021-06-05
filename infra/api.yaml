@@ -28,3 +28,5 @@ spec:
       tag: "202106051148" # {"$imagepolicy": "default:flux-vegetaas-api:tag"}
     config:
       VEGETAAS_LOGGER_JSON: "true"
+    autoscaling:
+      enabled: false
