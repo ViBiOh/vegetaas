@@ -31,7 +31,7 @@ func attack(url string, rps int, duration time.Duration) {
 	logger.Info("Attacking `%s` at %d requets per second during %s", url, rps, duration)
 	defer logger.Info("Attack of `%s` is done!", url)
 
-	attacker := vegeta.NewAttacker(vegeta.HTTP2(true), vegeta.KeepAlive(false), vegeta.Connections(10), vegeta.MaxConnections(100), vegeta.Workers(5), vegeta.MaxWorkers(10))
+	attacker := vegeta.NewAttacker(vegeta.HTTP2(true), vegeta.KeepAlive(false), vegeta.Connections(5), vegeta.MaxConnections(100), vegeta.Workers(3), vegeta.MaxWorkers(10))
 	defer attacker.Stop()
 
 	for range attacker.Attack(

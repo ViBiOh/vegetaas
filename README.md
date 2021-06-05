@@ -79,11 +79,13 @@ Usage of vegetaas:
   -okStatus int
         [http] Healthy HTTP Status code {VEGETAAS_OK_STATUS} (default 204)
   -port uint
-        [server] Listen port {VEGETAAS_PORT} (default 1080)
+        [server] Listen port (0 to disable) {VEGETAAS_PORT} (default 1080)
   -prometheusAddress string
         [prometheus] Listen address {VEGETAAS_PROMETHEUS_ADDRESS}
   -prometheusCert string
         [prometheus] Certificate file {VEGETAAS_PROMETHEUS_CERT}
+  -prometheusGzip
+        [prometheus] Enable gzip compression of metrics output {VEGETAAS_PROMETHEUS_GZIP}
   -prometheusIdleTimeout string
         [prometheus] Idle Timeout {VEGETAAS_PROMETHEUS_IDLE_TIMEOUT} (default "10s")
   -prometheusIgnore string
@@ -91,7 +93,7 @@ Usage of vegetaas:
   -prometheusKey string
         [prometheus] Key file {VEGETAAS_PROMETHEUS_KEY}
   -prometheusPort uint
-        [prometheus] Listen port {VEGETAAS_PROMETHEUS_PORT} (default 9090)
+        [prometheus] Listen port (0 to disable) {VEGETAAS_PROMETHEUS_PORT} (default 9090)
   -prometheusReadTimeout string
         [prometheus] Read Timeout {VEGETAAS_PROMETHEUS_READ_TIMEOUT} (default "5s")
   -prometheusShutdownTimeout string
