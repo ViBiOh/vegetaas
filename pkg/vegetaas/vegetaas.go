@@ -42,6 +42,7 @@ func attack(url string, rps int, duration time.Duration) {
 			Freq: rps,
 			Per:  time.Second,
 		}, duration, "Boom!") {
+		// no need to process metrics
 	}
 }
 
