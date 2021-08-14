@@ -3,6 +3,6 @@ module github.com/ViBiOh/vegetaas
 go 1.16
 
 require (
-	github.com/ViBiOh/httputils/v4 v4.19.3
+	github.com/ViBiOh/httputils/v4 v4.20.1
 	github.com/tsenart/vegeta/v12 v12.8.4
 )
