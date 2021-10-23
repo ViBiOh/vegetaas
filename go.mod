@@ -3,7 +3,7 @@ module github.com/ViBiOh/vegetaas
 go 1.17
 
 require (
-	github.com/ViBiOh/httputils/v4 v4.26.0
+	github.com/ViBiOh/httputils/v4 v4.27.1
 	github.com/tsenart/vegeta/v12 v12.8.4
 )
 
@@ -16,7 +16,7 @@ require (
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/prometheus/client_golang v1.11.0 // indirect
 	github.com/prometheus/client_model v0.2.0 // indirect
-	github.com/prometheus/common v0.31.1 // indirect
+	github.com/prometheus/common v0.32.1 // indirect
 	github.com/prometheus/procfs v0.6.0 // indirect
 	golang.org/x/net v0.0.0-20210525063256-abc453219eb5 // indirect
 	golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c // indirect
