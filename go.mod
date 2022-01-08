@@ -3,7 +3,7 @@ module github.com/ViBiOh/vegetaas
 go 1.17
 
 require (
-	github.com/ViBiOh/httputils/v4 v4.34.1
+	github.com/ViBiOh/httputils/v4 v4.34.2
 	github.com/tsenart/vegeta/v12 v12.8.4
 )
 
