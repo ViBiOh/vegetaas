@@ -28,5 +28,7 @@ spec:
       tag: "202202190848" # {"$imagepolicy": "default:flux-vegetaas-api:tag"}
     config:
       VEGETAAS_LOGGER_JSON: "true"
+      VEGATAAS_TRACER_URL: http://jaeger.monitoring:14268/api/traces
+      OTEL_SERVICE_NAME: vegetaas
     autoscaling:
       enabled: false

@@ -108,6 +108,10 @@ Usage of vegetaas:
         [server] Read Timeout {VEGETAAS_READ_TIMEOUT} (default "5s")
   -shutdownTimeout string
         [server] Shutdown Timeout {VEGETAAS_SHUTDOWN_TIMEOUT} (default "10s")
+  -tracerRate string
+        [tracer] Jaeger sample rate, 'always', 'never' or a float value {VEGETAAS_TRACER_RATE} (default "always")
+  -tracerURL string
+        [tracer] Jaeger endpoint URL (e.g. http://jaeger:14268/api/traces) {VEGETAAS_TRACER_URL}
   -url string
         [alcotest] URL to check {VEGETAAS_URL}
   -userAgent string
