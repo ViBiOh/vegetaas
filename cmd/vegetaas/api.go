@@ -60,7 +60,7 @@ func main() {
 	appHandler := vegetaas.Handler()
 
 	go promServer.Start("prometheus", healthApp.End(), prometheusApp.Handler())
-	go appServer.Start("http", healthApp.End(), httputils.Handler(appHandler, healthApp, recoverer.Middleware, prometheusApp.Middleware, owasp.New(owaspConfig).Middleware, cors.New(corsConfig).Middleware))
+	go appServer.Start("http", healthApp.End(), httputils.Handler(appHandler, healthApp, recoverer.Middleware, prometheusApp.Middleware, tracerApp.Middleware, owasp.New(owaspConfig).Middleware, cors.New(corsConfig).Middleware))
 
 	healthApp.WaitForTermination(appServer.Done())
 	server.GracefulWait(appServer.Done(), promServer.Done())
