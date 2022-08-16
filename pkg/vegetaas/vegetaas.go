@@ -55,13 +55,13 @@ func parseQuery(r *http.Request) (url string, rps int, duration time.Duration, e
 
 	rps, err = strconv.Atoi(r.URL.Query().Get("rps"))
 	if err != nil {
-		err = fmt.Errorf("parse request per second: %s", err)
+		err = fmt.Errorf("parse request per second: %w", err)
 		return
 	}
 
 	duration, err = time.ParseDuration(r.URL.Query().Get("duration"))
 	if err != nil {
-		err = fmt.Errorf("parse duration: %s", err)
+		err = fmt.Errorf("parse duration: %w", err)
 		return
 	}
 
