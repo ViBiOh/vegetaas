@@ -25,7 +25,7 @@ spec:
     nameOverride: vegetaas
     image:
       name: vibioh/vegetaas
-      tag: "202211252353" # {"$imagepolicy": "default:flux-vegetaas-api:tag"}
+      tag: "202212022138" # {"$imagepolicy": "default:flux-vegetaas-api:tag"}
     config:
       VEGETAAS_LOGGER_JSON: "true"
       VEGATAAS_TRACER_URL: http://jaeger.monitoring:14268/api/traces
